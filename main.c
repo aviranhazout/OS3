@@ -83,9 +83,10 @@ int main(int argc, char *argv[])
         close(sock);
         error("bind() failed");
     }
-
+int i = 0;
     while (1)
     {
+        printf(" start loop %d\n",i++);
 /* Set the size of the in-out parameter */
         cliAddrLen = sizeof(echoClntAddr);
 /* Block until receive message from a client */
@@ -95,6 +96,8 @@ int main(int argc, char *argv[])
             close(sock);
             error("recvfrom() failed");
         }
+        printf("after receive %d\n",i++);
+
         if (recvMsgSize == 0)
         {//no actual message
             flush_socket(sock);
