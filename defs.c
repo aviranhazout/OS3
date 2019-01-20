@@ -27,6 +27,7 @@ N/A
 
 #define WAIT_FOR_PACKET_TIMEOUT 3
 #define NUMBER_OF_FAILURES 7
+#define ACK_OPCODE 4
 #define MAX_DATA_SIZE 516
 #define MAX_FILE_NAME 255
 #define FALSE 0
